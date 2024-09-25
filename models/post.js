@@ -31,6 +31,4 @@ db.sequelize.getQueryInterface().showAllTables().then((tables) => {
   Clientes.sync().then(() => console.log('Clients synced successfully!'))
 })
 
-module.exports = {
-    Clientes: Clientes,
-};
+module.exports = Clientes

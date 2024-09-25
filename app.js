@@ -2,7 +2,7 @@ const express = require('express')
 const { create } = require('express-handlebars')
 const path = require('path')
 const bodyParser = require('body-parser')
-const Clients = require('./models')
+const Clientes = require('./models/post')
 
 const app = express()
 const handlebars = create({ defaultLayout: 'main' })
@@ -20,7 +20,7 @@ app.get("/", function (req, res) {
 })
 
 app.post("/cadastrar", function (req, res) {
-    Clientes.create({ 
+  Clientes.create({ 
         nome: req.body.nome,
         endereco: req.body.endereco,
         bairro: req.body.bairro,
